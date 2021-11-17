@@ -20,6 +20,55 @@ html {
   --hue-wrong: 0;
   --hue-correct: 145;
 }
+.header {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-around;
+}
+
+.subheader {
+  position: absolute;
+  margin-top: -20rem;
+}
+
+h1 {
+  color: #fff;
+  opacity: 0;
+  animation: headerComeIn 2s .3s forwards;
+}
+
+h3 {
+  color: #fff;
+  background-color: black;
+  border: 5px solid grey;
+  padding: 1rem 2rem;
+  text-align: center;
+  max-width: 15rem;
+  border-radius: 10px;
+}
+
+#charan{
+  transform: translateX(-100%);
+  animation: charanSlide 1s .2s linear forwards;
+}
+
+#nasra{
+  transform: translateX(100%);
+  animation: nasraSlide 1s .2s linear forwards;
+}
+
+
+#taylor{
+  transform: translateY(-100%);
+  animation: taylorSlide 1s .2s linear forwards;
+}
+#tibet{
+  transform: translateY(-100%);
+  animation: taylorSlide 1s .2s linear forwards;
+}
 
 body {
   --hue: var(--hue-neutral);
@@ -57,44 +106,84 @@ body .wrong {
   margin: 20px 0;
 }
 
-.btn{
-    --hue: var(--hue-neutral);
-    border: hsl(var(--hue-neutral), 100%, 30%);
-    background-color: hsl(var(--hue-neutral), 100%, 40%);
-    border-radius: 5px;
-    padding: 15px 10px;
-    color: white;
-    outline: none;
-    transition: 
-    transform 0.2s ease-in;
+.btn {
+  --hue: var(--hue-neutral);
+  border: hsl(var(--hue-neutral), 100%, 30%);
+  background-color: hsl(var(--hue-neutral), 100%, 40%);
+  border-radius: 5px;
+  padding: 15px 10px;
+  color: white;
+  outline: none;
+  transition: transform 0.2s ease-in;
 }
 
-.btn:hover{
-    border-color: black;
-    transform: translateY(-10%);
+.btn:hover {
+  border-color: black;
+  transform: translateY(-10%);
 }
 
-.btn-correct{
-    --hue : var(--hue-correct);
-    color: black;
+.btn-correct {
+  --hue: var(--hue-correct);
+  color: black;
 }
 
-.btn-wrong{
-    --hue : var(--hue-wrong);
+.btn-wrong {
+  --hue: var(--hue-wrong);
 }
 
-.start-btn, .next-btn{
-font-size: 1.5rem;
-font-weight: bold;
-padding: 10px 20px;
+.start-btn,
+.next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
 }
 
-.controls{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hide{
-    display: none;
+.hide {
+  display: none;
+}
+
+@keyframes headerComeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes charanSlide{
+  form{
+transform: translateX(-100%);
+  }
+  to{
+transform: translateX(0%);
+  }
+}
+
+@keyframes nasraSlide{
+  form{
+transform: translateX(100%);
+  }
+  to{
+transform: translateX(0%);
+  }
+}
+
+
+@keyframes taylorSlide {
+  form{
+    transform: translateY(-100%);
+      }
+      to{
+    transform: translateY(0%);
+      }
 }
