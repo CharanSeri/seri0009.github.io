@@ -28,7 +28,18 @@ html {
   grid-template-columns: repeat(4, auto);
   justify-content: space-around;
 }
-
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+img{
+max-height: 20rem;
+margin-top: 1rem;
+}
 .subheader {
   position: absolute;
   margin-top: -20rem;
